@@ -10,11 +10,11 @@ const now = new Date ();
 const seconds = now.getSeconds();
 const secondsDegrees = ((seconds / 60) * 360) + 90;
 secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
-if (seconds === 60){
-    secondHand.style.transform = 'none';
-}else {
-    secondHand.style.transition = 'all 0.05s';
-}
+    if(seconds === 0) {
+          secondHand.style.transition = 'none';
+        } else {
+          secondHand.style.transition = 'all 0.05s';
+        }
 
 
 
